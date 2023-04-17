@@ -1,0 +1,79 @@
+1. ArrayList    //done
+
+2. StringBuilder   //done
+
+3.substring //done
+
+4.Scanner //done
+
+5.diagram symbols  //done
+    square: private, hollow: attribute, solid: method
+    circle: public, hollow: attribute, solid: method
+    Enum: underlined: public static method.
+    c inside a circle: class
+    e inside a circle: enum
+    solid line with diamond: composition (diamond end: uses. other end: used by diamond.)
+    dash line: calling. no composition
+
+6. String.format  //done
+
+7.Array  //done
+
+8.Exception //done
+    IllegalArgumentException //in java.lang
+    InputMismatchException  //in java.util 
+    NullPointerException     //in java.lang
+
+9.git   //done
+    //version control systemn (VCS / git == distributed VCS) or source control management (SCM)
+    git clone <remote repo ssh key>
+    git pull //get the latest update from remote before creating branch off local clone repo
+    git branch -b  // ?????
+    git check out branch_name  //switch active branch
+    git branch  //list all branches
+    git remote -v  //list active remote repo for pushing/pulling
+
+    git init //create local git if no cloning has been done
+    git log //see history of commits
+    git status //see status of local git files
+    git add  .  //stage all git files
+    git commit -m "msg"  //commit staged files
+    git push origin branch-name //push to remote origin
+
+
+
+10. terminal //done
+    $0  //current shell
+    $SHELL //default shell
+    $PATH  //common values /bin, /sbin, /usr/bin, /usr/sbin
+    ls -la
+    mkdir folderx  //mke new folder
+    rmdir folderx  //remove one or more empty folders
+    rm -fr   //remove non-empty folder
+    rm       //remove files
+    mv  //move files or folders
+    cp  //copy files
+    cp (-r or -R) src target //copy folders including folder name if no target given
+    whatis cp //get basic desc of cp cmd
+    man cp //man page. type q to quit.
+
+
+10.String  //done
+
+
+11.Enum
+
+12.package  //done
+
+13.object equality
+
+14.wrapper class
+
+
+15.class //done
+
+16.main  //done
+
+17.encapsulation
+
+18.review project code (mine , solution)
