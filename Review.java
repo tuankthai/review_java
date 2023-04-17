@@ -17,6 +17,18 @@ public class Review {
         test.testStringFormat();
         test.testArray();
         test.testException();
+    
+        try {
+            test.testEnum();
+        }
+        catch (IllegalArgumentException e) {
+
+            System.out.println("InputMismatchException detected: " + e.getMessage());
+        }
+
+        test.testObjEquality();
+        
+        
 
         /**
          * 

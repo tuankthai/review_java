@@ -3,6 +3,8 @@ package review_java;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.time.DayOfWeek;
+import java.time.Month;
 
 public class AllTests {
     Scanner scanner;
@@ -114,7 +116,7 @@ public class AllTests {
         scanner.close(); // REMEMBER
 
     }
-    
+
     public void testString() {
         String msg = "string abc";
         String msgB = "string ABC";
@@ -130,10 +132,10 @@ public class AllTests {
         printMsg(msg);
     }
 
-    private void printArray(String[] strArr){
+    private void printArray(String[] strArr) {
         System.out.println("print string array:");
-        for (String msg : strArr){
-            bldStr.append(msg + "," );
+        for (String msg : strArr) {
+            bldStr.append(msg + ",");
         }
         System.out.println(bldStr.toString());
         bldStr.setLength(0);
@@ -152,7 +154,7 @@ public class AllTests {
         strArrZ[1] = "celery";
 
         printArray(strArrX);
-        System.out.println("strArrX has length :" + strArrX.length); //lenght is attr of array, not a method REMEMBER
+        System.out.println("strArrX has length :" + strArrX.length); // lenght is attr of array, not a method REMEMBER
         printArray(strArrZ);
 
     }
@@ -161,28 +163,103 @@ public class AllTests {
         throw new IllegalArgumentException("bad arg");
 
     }
-    
+
     private void tryThrowTwo() {
         throw new NullPointerException("bad pointer");
 
     }
 
     public void testException() {
-        try{
+        try {
 
             // tryThrowOne();
             tryThrowTwo();
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("IllegalArgumentException detected: " + e.getMessage());
 
-        }
-        catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             System.out.println("NullPointerException detected: " + e.getMessage());
 
         }
     }
-    
 
+    private void printEnumList() {
+        bldStr.append("show enum list:  ");
+        for (NewEnum dirEnum : NewEnum.values()) {
+            bldStr.append(dirEnum.getName() + ",");
+        }
+
+        System.out.println(bldStr);
+        bldStr.setLength(0);
+    }
+
+    private void printEnumArrList(ArrayList<NewEnum> enumList) {
+
+        bldStr.append("show enum Arraylist:  ");
+        for (NewEnum aEnum : enumList) {
+            bldStr.append(aEnum.getName() + ",");
+
+        }
+        System.out.println(bldStr);
+        bldStr.setLength(0);
+    }
+
+    private void printDaysOfWeek() {
+        bldStr.append("show days of week:  ");
+        for (DayOfWeek day : DayOfWeek.values()) {
+            bldStr.append(day + ",");
+        }
+        System.out.println(bldStr);
+        bldStr.setLength(0);
+    }
+
+    private void printMonths() {
+        bldStr.append("show months:  ");
+        for (Month month : Month.values()) {
+            bldStr.append(month + ",");
+        }
+        System.out.println(bldStr);
+        bldStr.setLength(0);
+    }
+
+    public void testEnum() {
+        NewEnum newEnumX;
+        ArrayList<NewEnum> enumList = new ArrayList<>();
+
+        printEnumList();
+
+        newEnumX = NewEnum.valueOf("NORTH"); // REMEMBER
+        enumList.add(newEnumX);
+        newEnumX = NewEnum.valueOf("WEST"); // REMEMBER
+        enumList.add(newEnumX);
+        newEnumX = NewEnum.valueOf("EAST"); // REMEMBER
+        enumList.add(newEnumX);
+        newEnumX = NewEnum.valueOf("SOUTH"); // REMEMBER
+        enumList.add(newEnumX);
+        printEnumArrList(enumList);
+
+        newEnumX = NewEnum.xformToEnum("North");
+        enumList.add(newEnumX);
+        printEnumArrList(enumList);
+
+        // newEnumX = NewEnum.xformToEnum("Ocean"); //no such thing. exception!!
+        printDaysOfWeek();
+        printMonths();
+
+    }
+
+    public void testObjEquality() {
+        Flower plantA = new Flower("rose");
+        Flower plantB = new Flower("lily");
+
+        System.out.println("test obj equality:  ");
+
+        if (plantA.equals(plantB)) {
+            System.out.println("yes, they are equals");
+
+        } else {
+            System.out.println("no, they are not equals");
+        }
+    }
 
 }

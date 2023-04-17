@@ -28,17 +28,24 @@
     //version control systemn (VCS / git == distributed VCS) or source control management (SCM)
     git clone <remote repo ssh key>
     git pull //get the latest update from remote before creating branch off local clone repo
-    git branch -b  // ?????
-    git check out branch_name  //switch active branch
+
+    git branch new_branch_name      //create new branch
+    git checkout branch_name        //switch to or select branch
+
+    git checkout -b new_branch_name   // create new branch and directly go to new branch  REMEMBER
+
+     
     git branch  //list all branches
-    git remote -v  //list active remote repo for pushing/pulling
+    git remote -v  //list active remote repo origin for pushing/pulling/fetching
 
     git init //create local git if no cloning has been done
     git log //see history of commits
     git status //see status of local git files
     git add  .  //stage all git files
     git commit -m "msg"  //commit staged files
+
     git push origin branch-name //push to remote origin
+    git push -u origin branch-name //push to remote origin and -u sets default origin for upstream
 
 
 
@@ -47,8 +54,14 @@
     $SHELL //default shell
     $PATH  //common values /bin, /sbin, /usr/bin, /usr/sbin
     ls -la
+
     mkdir folderx  //mke new folder
+    mkdir dirA && cd $_    //mke new folder and cd to that folder
     rmdir folderx  //remove one or more empty folders
+ 
+    touch fileA && code $_   //make fileA and vscode to that file
+
+
     rm -fr   //remove non-empty folder
     rm       //remove files
     mv  //move files or folders
@@ -61,19 +74,33 @@
 10.String  //done
 
 
-11.Enum
+11.Enum  //done
+    values()   //get list enum constants
+    valueOf()   //convert enum constant string to enum constant type
+    pubic static method 
 
 12.package  //done
 
-13.object equality
+13.object equality   //done
 
-14.wrapper class
+14.wrapper class    //done
+    byte    Byte
+    shor    Short
+    int     Integer     //int   100     --default
+    long    long        //long  100L
+    float   float       //float 100.10f
+    double  double      //double 100.10 -- default
+    boolean Boolean
+    char    Character
+
 
 
 15.class //done
 
 16.main  //done
 
-17.encapsulation
+17.encapsulation        //done
+    getName()  //name is private attribute
+    setName()  //name is private attribute
 
-18.review project code (mine , solution)
+18.review project code (mine , solution)   //?????????
